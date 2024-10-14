@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "720265894839",
+    "project_id": "pic-log-222e6",
+    "storage_bucket": "pic-log-222e6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:720265894839:android:15911b3f22ae0f79706632",
+        "android_client_info": {
+          "package_name": "com.example.piclogmain"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbvIqWC8qN64PRErLLke9MIe7BnKBkDjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
