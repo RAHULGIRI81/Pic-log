@@ -200,7 +200,7 @@ class _User_sign_upState extends State<User_sign_up> {
                 },
               ),
               SizedBox(
-                height: 20,
+                height: 40,
               ),
               InkWell(
                   onTap: () {
@@ -219,14 +219,43 @@ class _User_sign_upState extends State<User_sign_up> {
                         width: 150,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Colors.blue),
+                            color: Colors.blue.shade900),
                         child: Center(
                             child: Text(
                           'Submit',
                           style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.bold, color: Colors.white),
+                              fontWeight: FontWeight.bold, color: Colors.white,fontSize: 20),
                         )),
-                      )))
+                      ))),
+              SizedBox(
+                height: 30,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Do you have account ?",
+                    style: TextStyle(
+                        fontSize: 18.sp,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return User_Login_page();
+                      },));
+                    },
+                    child: Text(
+                      " Login",
+                      style: TextStyle(
+                          fontSize: 30.sp,
+                          color: Colors.blue.shade900,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ],
+              )
             ],
           ),
         ),

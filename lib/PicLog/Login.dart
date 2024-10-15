@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:piclogmain/PicLog/Add_data.dart';
 import 'package:piclogmain/PicLog/Signup.dart';
+import 'package:piclogmain/PicLog/View%20data.dart';
 import 'package:piclogmain/main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -33,9 +34,9 @@ class _User_Login_pageState extends State<User_Login_page> {
       SharedPreferences data = await SharedPreferences.getInstance();
       data.setString('id', id);
 
-      Navigator.push(context, MaterialPageRoute(
+      Navigator.pushReplacement(context, MaterialPageRoute(
         builder: (context) {
-          return User_Add_Data();
+          return User_View_data();
         },
       ));
     } else {
@@ -156,7 +157,7 @@ class _User_Login_pageState extends State<User_Login_page> {
                 height: 30,
               ),
               Text(
-                'Get capture your \n favrote momments',
+                'CAPTURE YOUR MOMENTS',
                 style: GoogleFonts.podkova(
                     color: Colors.black,
                     fontSize: 30,
@@ -207,7 +208,7 @@ class _User_Login_pageState extends State<User_Login_page> {
                   Text(
                     "Do you have account ?",
                     style: TextStyle(
-                        fontSize: 14.sp,
+                        fontSize: 18.sp,
                         color: Colors.black,
                         fontWeight: FontWeight.bold),
                   ),
