@@ -80,35 +80,55 @@ class _User_View_dataState extends State<User_View_data> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Name: ${viewPiclogDetails["Name"] ?? ""}",
-                style: GoogleFonts.poppins(
+                " ${viewPiclogDetails["Name"] ?? ""}",
+                style: GoogleFonts.alumniSans(
                   color: Colors.black,
-                  fontSize: 20,
+                  fontSize: 25,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               SizedBox(height: 10),
+
+
               GestureDetector(
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return FullSizeImageView(imageUrl: viewPiclogDetails["url"]);
-                  }));
+                  String? imageUrl = viewPiclogDetails["url"];
+                  if (imageUrl == null || imageUrl.isEmpty) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text('Image URL is not available'),
+                        backgroundColor: Colors.red,
+                      ),
+                    );
+                  } else {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return FullSizeImageView(imageUrl: imageUrl);
+                        },
+                      ),
+                    );
+                  }
                 },
                 child: Container(
-                  height: 200,
+                  height: 300,
                   width: double.infinity,
                   decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
                     image: DecorationImage(
-                      image: NetworkImage(viewPiclogDetails["url"]),
+                      image: NetworkImage(viewPiclogDetails["url"] ?? 'https://via.placeholder.com/300'), // Placeholder
                       fit: BoxFit.cover,
                     ),
                   ),
                 ),
               ),
+
+
               SizedBox(height: 10),
-              buildDetailText("Ocation: ${viewPiclogDetails["Ocation"] ?? ""}"),
+              buildDetailText("Occasion: ${viewPiclogDetails["Ocation"] ?? ""}"),
               buildDetailText("Location: ${viewPiclogDetails["Location"] ?? ""}"),
-              buildDetailText("Date: ${viewPiclogDetails["Date"] ?? ""}"),
+              buildDetailText("Date/Time: ${viewPiclogDetails["Date"] ?? ""}"),
             ],
           ),
         ),

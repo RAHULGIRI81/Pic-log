@@ -140,11 +140,11 @@ class _page_2State extends State<User_Add_Data> {
                     Row(
                       children: [
                         CircleAvatar(
-                          child: Image(image: AssetImage('assets/User.jpg')),
+                          child: Image(image: AssetImage('assets/User.jpg'),),
                         ),
                         SizedBox(width: 5.w),
                         Text(
-                          Profile!["Name"],
+                          'Hi ${Profile!["Name"]}',
                           style: GoogleFonts.aBeeZee(fontSize: 30, fontWeight: FontWeight.bold),
                         ),
                         SizedBox(width: 10),
@@ -188,7 +188,11 @@ class _page_2State extends State<User_Add_Data> {
                       ),
                     ),
                     SizedBox(height: 10.h),
-                    Text('Enter the Location', style: GoogleFonts.poppins(fontWeight: FontWeight.bold)),
+                    Row(
+                      children: [
+                        Text('Enter the Location', style: GoogleFonts.poppins(fontWeight: FontWeight.bold)),
+                      ],
+                    ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: TextFormField(
@@ -209,7 +213,11 @@ class _page_2State extends State<User_Add_Data> {
                       ),
                     ),
                     SizedBox(height: 20.h),
-                    Text('Enter the Occasion', style: GoogleFonts.poppins(fontWeight: FontWeight.bold)),
+                    Row(
+                      children: [
+                        Text('Enter the Occasion', style: GoogleFonts.poppins(fontWeight: FontWeight.bold)),
+                      ],
+                    ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: TextFormField(

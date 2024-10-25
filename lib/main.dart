@@ -3,7 +3,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:piclogmain/PicLog/Signup.dart';
 import 'package:piclogmain/PicLog/Add_data.dart';
-import 'package:piclogmain/ex/ex.dart';
 import 'PicLog/Login.dart';
 import 'PicLog/View data.dart';
 import 'firebase_options.dart';

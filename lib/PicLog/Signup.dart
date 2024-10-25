@@ -25,7 +25,7 @@ class _User_sign_upState extends State<User_sign_up> {
       "Password": Password_ctrl.text,
       "State": 0,
     });
-    Navigator.push(context, MaterialPageRoute(
+    Navigator.pushReplacement(context, MaterialPageRoute(
       builder: (context) {
         return User_Login_page();
       },
@@ -215,8 +215,8 @@ class _User_sign_upState extends State<User_sign_up> {
                         User_signup();
                       },
                       child: Container(
-                        height: 40,
-                        width: 150,
+                        height: 50,
+                        width: 170,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.blue.shade900),
@@ -224,7 +224,7 @@ class _User_sign_upState extends State<User_sign_up> {
                             child: Text(
                           'Submit',
                           style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.bold, color: Colors.white,fontSize: 20),
+                              fontWeight: FontWeight.bold, color: Colors.white,fontSize: 22),
                         )),
                       ))),
               SizedBox(
@@ -242,7 +242,7 @@ class _User_sign_upState extends State<User_sign_up> {
                   ),
                   InkWell(
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
                         return User_Login_page();
                       },));
                     },

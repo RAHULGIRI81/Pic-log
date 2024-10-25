@@ -160,7 +160,7 @@ class _User_Login_pageState extends State<User_Login_page> {
                 'CAPTURE YOUR MOMENTS',
                 style: GoogleFonts.podkova(
                     color: Colors.black,
-                    fontSize: 30,
+                    fontSize: 25,
                     fontWeight: FontWeight.bold),
               ),
               SizedBox(
@@ -200,7 +200,7 @@ class _User_Login_pageState extends State<User_Login_page> {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: 20,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -221,7 +221,7 @@ class _User_Login_pageState extends State<User_Login_page> {
                     child: Text(
                       " Sign up",
                       style: TextStyle(
-                          fontSize: 14.sp,
+                          fontSize: 20.sp,
                           color: Colors.blue.shade900,
                           fontWeight: FontWeight.bold),
                     ),

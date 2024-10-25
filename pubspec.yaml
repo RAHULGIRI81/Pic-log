@@ -44,10 +44,17 @@ dependencies:
   shared_preferences: ^2.3.2
   intl: ^0.17.0
   firebase_storage: ^12.3.3
-  dio: ^5.0.4
-  path_provider: ^2.0.11
-  open_file: ^3.2.1
-  permission_handler: ^10.0.0
+  flutter_launcher_icons: "^0.14.1"
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/piclog.png"
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/piclog.png"
+
+
+
 
 dev_dependencies:
   flutter_test:
